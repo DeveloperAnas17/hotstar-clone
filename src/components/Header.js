@@ -4,70 +4,87 @@ import MenuIcon from "@material-ui/icons/Menu";
 import SearchIcon from "@material-ui/icons/Search";
 
 function Header() {
+  // const handleAuth = () => {
+  //   auth.signIn;
+  // };
   return (
     <Nav>
-      <Logo>
-        <img
-          src="https://secure-media.hotstarext.com/web-assets/prod/images/brand-logos/disney-hotstar-logo-dark.svg"
-          alt=""
-        />
-      </Logo>
+      <Left>
+        <Logo>
+          <img
+            src="https://secure-media.hotstarext.com/web-assets/prod/images/brand-logos/disney-hotstar-logo-dark.svg"
+            alt=""
+          />
+        </Logo>
 
-      <NavMenu>
-        <List1>
-          <span>TV</span>
-          <ListContent className="list1">
-            <a href="#">Hotstar Specials</a>
-            <a href="#">Star Plus</a>
-            <a href="#">Star Vijay</a>
-            <a href="#">Hotstar </a>
-            <a href="#"> Star Bharat</a>
-            <a href="#"> Star Maa</a>
-            <a href="#"> Star World</a>
-            <a href="#"> more...</a>
-          </ListContent>
-        </List1>
-        <List2>
-          <span>Movies</span>
-          <ListContent className="list2">
-            <a href="#">Hindi</a>
-            <a href="#">English </a>
-            <a href="#">Telugu</a>
-            <a href="#">Malyalam</a>
-            <a href="#">Kannada</a>
-            <a href="#">Bengali</a>
-            <a href="#">Marathi</a>
-            <a href="#">Tamil</a>
-          </ListContent>
-        </List2>
-        <List3>
-          <span>Sports</span>
-          <ListContent className="list3">
-            <a href="#">Cricket</a>
-            <a href="#">Football</a>
-            <a href="#">BadMinton</a>
-            <a href="#">Formula 1</a>
-            <a href="#">Martial Arts</a>
-            <a href="#">Tennis</a>
-            <a href="#">Hockey</a>
-            <a href="#">Golf</a>
-            <a href="#">Wrestling</a>
-            <a href="#">Table Tennis</a>
-            <a href="#">Athletics</a>
-          </ListContent>
-        </List3>
-        <p>
-          <a>News</a>
-        </p>
-        <p>
-          <a>Premium</a>
-        </p>
-      </NavMenu>
+        <NavMenu>
+          <List1>
+            <span>TV</span>
+            <ListContent className="list1">
+              <a href="#">Hotstar Specials</a>
+              <a href="#">Star Plus</a>
+              <a href="#">Star Vijay</a>
+              <a href="#">Hotstar </a>
+              <a href="#"> Star Bharat</a>
+              <a href="#"> Star Maa</a>
+              <a href="#"> Star World</a>
+              <a href="#"> more...</a>
+            </ListContent>
+          </List1>
+          <List2>
+            <span>Movies</span>
+            <ListContent className="list2">
+              <a href="#">Hindi</a>
+              <a href="#">English </a>
+              <a href="#">Telugu</a>
+              <a href="#">Malyalam</a>
+              <a href="#">Kannada</a>
+              <a href="#">Bengali</a>
+              <a href="#">Marathi</a>
+              <a href="#">Tamil</a>
+            </ListContent>
+          </List2>
+          <List3>
+            <span>Sports</span>
+            <ListContent className="list3">
+              <a href="#">Cricket</a>
+              <a href="#">Football</a>
+              <a href="#">BadMinton</a>
+              <a href="#">Formula 1</a>
+              <a href="#">Martial Arts</a>
+              <a href="#">Tennis</a>
+              <a href="#">Hockey</a>
+              <a href="#">Golf</a>
+              <a href="#">Wrestling</a>
+              <a href="#">Table Tennis</a>
+              <a href="#">Athletics</a>
+            </ListContent>
+          </List3>
+          <p>
+            <a>News</a>
+          </p>
+          <p>
+            <a>Premium</a>
+          </p>
+        </NavMenu>
+      </Left>
 
-      <SearchContainer>
-        <input type="text" placeholder="Search" />
-        <SearchIcon className="searchIcon" />
-      </SearchContainer>
+      <Right>
+        <SearchContainer>
+          <input type="text" placeholder="Search" />
+          <SearchIcon className="searchIcon" />
+        </SearchContainer>
+
+        <SignOut>
+          <UserImg
+            src="https://yt3.ggpht.com/ytc/AKedOLRbdv3Di8paQyrgMF_VwFXPkhwVzcW59Vgo8dTsyw=s48-c-k-c0x00ffffff-no-rj"
+            alt=""
+          />
+          <DropDown>
+            <span>Sign out</span>
+          </DropDown>
+        </SignOut>
+      </Right>
     </Nav>
   );
 }
@@ -194,5 +211,54 @@ const SearchContainer = styled.div`
     outline-width: 0;
     color: white;
     margin-right: 8px;
+  }
+`;
+
+const Left = styled.div`
+  display: flex;
+  align-items: center;
+`;
+const Right = styled.div`
+  display: flex;
+  align-items: center;
+`;
+
+const UserImg = styled.img`
+  height: 100%;
+`;
+
+const DropDown = styled.div`
+  position: absolute;
+  top: 48px;
+  right: 0px;
+  background: rgb(19, 19, 19);
+  border: 1px solid rgba(151, 151, 151, 0.34);
+  border-radius: 4px;
+  box-shadow: rgb(0 0 0 / 50%) 0px 0px 18px 0px;
+  padding: 10px;
+  font-size: 14px;
+  letter-spacing: 3px;
+  width: 100px;
+  opacity: 0;
+`;
+
+const SignOut = styled.div`
+  position: relative;
+  height: 48px;
+  width: 48px;
+  display: flex;
+  cursor: pointer;
+  align-items: center;
+  justify-content: center;
+  ${UserImg} {
+    border-radius: 50%;
+    width: 100%;
+    height: 100%;
+  }
+  &:hover {
+    ${DropDown} {
+      opacity: 1;
+      transition-duration: 1s;
+    }
   }
 `;
