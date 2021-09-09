@@ -243,6 +243,7 @@ const DropDown = styled.div`
 `;
 
 const SignOut = styled.div`
+  margin-left: 15px;
   position: relative;
   height: 48px;
   width: 48px;
