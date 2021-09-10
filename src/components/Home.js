@@ -1,6 +1,7 @@
 import React from "react";
 import styled from "styled-components";
 import ImgSlider from "./ImgSlider";
+import MovieRows from "./MovieRows";
 import Viewers from "./Viewers";
 
 function Home() {
@@ -8,6 +9,8 @@ function Home() {
     <HomeContainer>
       <ImgSlider />
       <Viewers />
+      <br />
+      <MovieRows />
     </HomeContainer>
   );
 }
@@ -15,6 +18,7 @@ function Home() {
 export default Home;
 
 const HomeContainer = styled.div`
+  color: white;
   position: relative;
   min-height: calc(100vh - 250px);
   overflow: hidden;

@@ -1,12 +1,34 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import styled from "styled-components";
-import MenuIcon from "@material-ui/icons/Menu";
+// import MenuIcon from "@material-ui/icons/Menu";
 import SearchIcon from "@material-ui/icons/Search";
+// import {
+//   selectUsername,
+//   selectUserphoto,
+//   setUserLoginDetatils,
+//   setSignOutState,
+// } from "../feature/user/userSlice";
+// import { useDispatch, useSelector } from "react-redux";
+// import { useHistory, Link } from "react-router-dom";
+// import { auth } from "../firebase";
+// import firebase from "firebase";
 
 function Header() {
-  // const handleAuth = () => {
-  //   auth.signIn;
-  // };
+  // const [user, setUser] = useState("");
+
+  // const dispatch = useDispatch();
+  // const history = useHistory();
+  // const username = useSelector(selectUsername);
+  // const userphoto = userSelector(selectUserphoto);
+
+  // useEffect(() => {
+  //   auth.onAuthStateChanged(async (user) => {
+  //     if (user) {
+  //       setUser(user);
+  //     }
+  //   });
+  // }, [username]);
+
   return (
     <Nav>
       <Left>
